@@ -1,0 +1,76 @@
+<mat-drawer-container class="main-container">
+    <mat-drawer class="sidenav" #drawer mode="side">
+        <div class="side-content">
+            <div class="contentHeader">
+                <div class="bar"></div>
+                <div class="header">
+                    <div><mat-icon>gite</mat-icon></div>
+                    <div>Beverages Inc.</div>
+                </div>
+            </div>
+            <a class="content" routerLink="/dashboard" (click)="currentNavigation('Dashboard')" routerLinkActive="active-section">
+                <div class="icon-section">
+                    <div><mat-icon>analytics</mat-icon></div>
+                    <div>Dashboard</div>
+                </div> 
+            </a>
+            <a class="content" routerLink="/beverages" (click)="currentNavigation('Beverages')" routerLinkActive="active-section">
+                <div class="icon-section">
+                    <div><mat-icon>liquor</mat-icon></div>
+                    <div>Beverages</div>
+                </div>
+            </a>
+            <a class="content" routerLink="/admin" (click)="currentNavigation('Admin')" routerLinkActive="active-section">
+                <div class="icon-section">
+                    <div><mat-icon>admin_panel_settings</mat-icon></div>
+                    <div>Accounts</div>
+                </div>
+            </a>
+            <!-- <a class="content" routerLink="/stock" (click)="currentNavigation('Stock')" routerLinkActive="active-section">
+                <div class="icon-section">
+                    <div><mat-icon>inventory</mat-icon></div>
+                    <div>Stock</div>
+                </div>
+            </a> -->
+            <!-- <a class="content" routerLink="/logs" (click)="currentNavigation('Logs')" routerLinkActive="active-section">
+                <div class="icon-section">
+                    <div><mat-icon>list_alt</mat-icon></div>
+                    <div>Logs</div>
+                </div>
+            </a>
+            <a class="content" routerLink="/supplier" (click)="currentNavigation('Supplier')" routerLinkActive="active-section">
+                <div class="icon-section">
+                    <div><mat-icon>warehouse</mat-icon></div>
+                    <div>Supplier</div>
+                </div>
+            </a> -->
+        </div>
+    </mat-drawer>
+    <mat-toolbar class="toolbar">
+        <div>
+            <button type="button" mat-button (click)="drawer.toggle()">
+                <mat-icon class="ham">view_headline</mat-icon>
+            </button>
+            <span>Beverages Inventory System / </span>
+            <span class="section">{{currentNav}}</span>
+        </div>
+        <div class="logout-section">
+            <div class="admin-name">
+                <p>{{adminName}}</p>
+            </div>
+            <button mat-button [matMenuTriggerFor]="beforeMenu"><mat-icon>admin_panel_settings</mat-icon></button>
+            <mat-menu #beforeMenu="matMenu" xPosition="before">
+            <!-- <button mat-menu-item routerLink="/dashboard/add-admin"><mat-icon>person_add_alt_1</mat-icon>Add Admin</button> -->
+            <button mat-menu-item (click)="logout()"><mat-icon>logout</mat-icon>Log-Out</button>
+            </mat-menu>
+        </div>
+        
+    </mat-toolbar>
+    <div class="contents">
+        <router-outlet></router-outlet>
+    </div>
+</mat-drawer-container>
+
+
+
+

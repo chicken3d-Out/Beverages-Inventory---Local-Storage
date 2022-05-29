@@ -1,0 +1,74 @@
+<div class="main">
+    <div class="content-container">
+        <mat-card class="header">
+            <p class="header-left">Update Beverages<mat-icon>add_circle</mat-icon></p>
+            <p class="header-right">Beverages Inc.<mat-icon>local_hospital</mat-icon></p>
+        </mat-card>
+        <mat-card class="body">
+            <mat-card-title>Update Beverages</mat-card-title>
+            <form [formGroup]="Add" class="form-grid" (ngSubmit)="onSubmit(Add)">
+                <div class="form-container">
+                    <div class="form-field">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <div class="field">
+                                <mat-form-field>
+                                    <mat-label>Name</mat-label>
+                                    <input type="text" matInput formControlName="name" [(ngModel)]="dataName" name="name">
+                                    <mat-error *ngIf="name && name.invalid && name.touched">
+                                        Name is <strong>Invalid</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="price">Price</label>
+                            <div class="field">
+                                <mat-form-field>
+                                    <mat-label>Price</mat-label>
+                                    <input type="text" matInput formControlName="price" [(ngModel)]="dataPrice" name="price">
+                                    <mat-error *ngIf="price && price.invalid && price.touched">
+                                        Price is <strong>Invalid</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <div class="form-group">
+                            <label for="stock">Stock</label>
+                            <div class="field">
+                                <mat-form-field>
+                                    <mat-label>Stock</mat-label>
+                                    <input type="text" matInput formControlName="stock" [(ngModel)]="dataStock" name="stock">
+                                    <mat-error *ngIf="stock && stock.invalid && stock.touched">
+                                        Stock is <strong>Invalid</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="supplier">Supplier</label>
+                            <div class="field">
+                                <mat-form-field>
+                                    <mat-label>Supplier</mat-label>
+                                    <input type="text" matInput formControlName="supplier" [(ngModel)]="dataSupplier" name="supplier">
+                                    <mat-error *ngIf="supplier && supplier.invalid && supplier.touched">
+                                        Supplier is <strong>Invalid</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <button type="submit" [disabled]="!Add.valid" mat-button color="primary" mat-raised-button>Update</button>
+                </div>
+            </form>
+          </mat-card>
+    </div>
+</div>
+
+

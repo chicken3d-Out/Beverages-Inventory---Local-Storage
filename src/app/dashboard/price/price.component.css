@@ -1,0 +1,66 @@
+.main {
+    width: 100%;
+    height: calc(100vh - 66px);
+}
+.main .table-container {
+    overflow: auto;
+    margin: 0 20px;
+    height: calc(100vh - 66px);
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+.main .table-container .upper-portion {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr auto;
+}
+.main .table-container .upper-portion .button-add {
+    display: flex;
+    align-items: center;
+}
+.main .table-container .upper-portion .export {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    margin: 0 40px 0 0;
+}
+.main .table-container .upper-portion .export button {
+    padding: 5px 15px;
+}
+.main .table-container .upper-portion .search {
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.main .table-container .upper-portion .button-add button {
+    padding: 5px 15px;
+}
+/* Structure */
+table {
+    width: 100%;
+}
+table th{
+    /*background-color: #685D79;*/
+    background-color: #614c80;
+    color:white;
+    box-shadow: 1px 1px 1px #000;
+
+    font-weight: bold;
+    font-size: 1rem;
+}
+table tr {
+    /*text-align: center;*/
+    background-color: #eee;
+    
+    font-size: 1rem;
+}
+table tr td {
+    padding: unset;
+}
+table tr button {
+    padding:unset;
+}

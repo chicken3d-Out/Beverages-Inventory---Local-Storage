@@ -1,0 +1,74 @@
+<div class="main">
+    <div class="content-container">
+        <mat-card class="header">
+            <p class="header-left">Add Account<mat-icon>add_circle</mat-icon></p>
+            <p class="header-right">Beverages Inc.<mat-icon>local_hospital</mat-icon></p>
+        </mat-card>
+        <mat-card class="body">
+            <mat-card-title>Add Account</mat-card-title>
+            <form [formGroup]="Add" class="form-grid" (ngSubmit)="onSubmit(Add)">
+                <div class="form-container">
+                    <div class="form-field">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <div class="field">
+                                <mat-form-field>
+                                    <mat-label>Name</mat-label>
+                                    <input type="text" matInput formControlName="name" name="name">
+                                    <mat-error *ngIf="name && name.invalid && name.touched">
+                                        Name is <strong>Invalid</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <div class="field">
+                                <mat-form-field>
+                                    <mat-label>Username</mat-label>
+                                    <input type="text" matInput formControlName="username" name="username">
+                                    <mat-error *ngIf="username && username.invalid && username.touched">
+                                        Username is <strong>Invalid</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="field">
+                                <mat-form-field>
+                                    <mat-label>Password</mat-label>
+                                    <input type="text" matInput formControlName="password" name="password">
+                                    <mat-error *ngIf="password && password.invalid && password.touched">
+                                        Password is <strong>Invalid</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="confirm">Confirm Password</label>
+                            <div class="field">
+                                <mat-form-field>
+                                    <mat-label>Confirm Password</mat-label>
+                                    <input type="text" matInput formControlName="confirm" name="confirm">
+                                    <mat-error *ngIf="confirm && confirm.invalid && confirm.touched">
+                                        Password<strong> Does Not Match</strong>
+                                    </mat-error>                                   
+                                </mat-form-field>
+                            </div>                           
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <button type="submit" [disabled]="!Add.valid" mat-button color="primary" mat-raised-button>Register</button>
+                </div>
+            </form>
+          </mat-card>
+    </div>
+</div>
+
+

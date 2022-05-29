@@ -1,0 +1,66 @@
+.main {
+    width: 100%;
+}
+.main .content {
+    margin: 1.5rem 1.5rem;
+}
+.main .content .divide {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 100px 1fr;
+}
+.main .content .divide .upper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 50px;
+}
+.main .content .divide .upper p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color:green;
+    
+}
+.main .content .divide .upper mat-card {
+    background-color: #eee;
+}
+.main .content .divide .drinks {
+    padding-top: 15px;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+}
+.main .content .example-card {
+    max-width: 400px;
+
+    background-color: #eee;
+}
+.main .content .image {
+    max-width: 500px;
+    min-height: 300px;
+    background-image: url('../../assets/cola.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main .content .image2 {
+    max-width: 500px;
+    min-height: 300px;
+    background-image: url('../../assets/milk.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main .content .image3 {
+    max-width: 500px;
+    min-height: 300px;
+    background-image: url('../../assets/rootBeer.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+.main .content .example-header-image {
+    background-image: url('../../assets/bg4.jpg');
+    background-size: cover;
+}

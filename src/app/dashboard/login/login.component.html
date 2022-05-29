@@ -1,0 +1,79 @@
+<div class="main-container">
+    <mat-toolbar class="toolbar">
+        <div class="home-title">
+            <mat-icon>home</mat-icon>
+            <span>Beverages Inventory System</span>
+        </div>
+        <div class="contact-info">
+            <div class="op1">
+                <!-- <mat-icon>contact_support</mat-icon>
+                <div>About</div> -->
+            </div>
+            <div class="op2">
+                <!-- <mat-icon>phone_in_talk</mat-icon>
+                <div>Contact Us</div> -->
+            </div>  
+        </div>
+    </mat-toolbar>
+    <div class="main">
+        <div class="banner-container">
+            <mat-card class="banner-left">
+                <div>
+                    A Sip, It’s a Refreshing lift<br>
+                </div>
+                <div>
+                    Get <span>REFRESHED!</span>
+                </div>
+            </mat-card>
+            <mat-card class="banner-right">
+                <div class="welcome">
+                    Login to your account.
+                </div>
+                <div class="alert alert-danger" *ngIf="credentials">
+                    Invalid Username or Password.
+                </div>
+                <div class="form">
+                    <form [formGroup]="login" class="form-grid" (ngSubmit)="onSubmit(login)">
+                        <div class="form-group">
+                            <label for="usernmae">Username</label>
+                            <div class="field">
+                                <mat-icon>person</mat-icon>
+                                <mat-form-field>
+                                    <mat-label>Username</mat-label>
+                                    <input matInput type="text" formControlName="username" name="username">
+                                    <mat-error *ngIf="username && username.invalid && username.touched">
+                                        Username is <strong>Invalid</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div> 
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="field">
+                                <mat-icon>vpn_key</mat-icon>
+                                <mat-form-field>
+                                    <mat-label>Password</mat-label>
+                                    <input matInput [type]="hide ? 'password' : 'text'" type="text" formControlName="password" name="password">
+                                    <mat-error *ngIf="password && password.invalid && password.touched">
+                                        Password is <strong>Invalid</strong>
+                                    </mat-error>
+                                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                    </button>
+                                </mat-form-field>
+                            </div> 
+                        </div>
+                        <div class="con1">
+                            <button type="submit" [disabled]="!login.valid" mat-button color="primary" mat-raised-button>Login</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+
+
+
