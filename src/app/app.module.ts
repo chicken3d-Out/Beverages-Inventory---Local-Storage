@@ -81,7 +81,7 @@ import { LoginComponent } from './dashboard/login/login.component';
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
       //Redirect Path
-      { path: '', redirectTo: 'login', pathMatch: 'full' },
+      { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
       {path: '', component: DashboardComponent, children: [
         {path: 'dashboard', component: DashboardStatComponent},
         {path: 'beverages', component: BeveragesComponent},
