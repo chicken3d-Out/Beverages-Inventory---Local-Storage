@@ -68,3 +68,41 @@ button {
 .main .content-container .form-container .form-field .alert {
     width: 65%;
 }
+/* Desktop/Laptop */
+@media (max-width: 1200px) {
+}
+/* Tablet */
+@media (max-width: 992px) {
+    .main .content-container .form-container .form-field {
+        display: flex;
+        flex-direction: column;
+        padding: 0 50px;
+    }
+}
+/* Tablet/Mobile Large */
+@media (max-width: 768px) {
+    * {
+        font-size: .9rem;
+    }
+    .main .content-container .form-container .form-field {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .main .content-container .form-container {
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+    }
+    .button {
+        margin-top: 1rem;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    button {
+        grid-column: 1/2;
+    }
+}
+/* Mobile */
+@media (max-width: 576px) {
+}

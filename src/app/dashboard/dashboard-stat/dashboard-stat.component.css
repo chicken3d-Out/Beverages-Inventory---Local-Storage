@@ -7,31 +7,30 @@
 .main .content .divide {
     display: grid;
     grid-auto-flow: row;
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: 95px 1fr;
 }
 .main .content .divide .upper {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: repeat(2, auto);
-    column-gap: 50px;
+    column-gap: 35px;
 }
 .main .content .divide .upper p {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.2rem;
     font-weight: 700;
     color:green;
-    
 }
 .main .content .divide .upper mat-card {
     background-color: #eee;
 }
-.main .content .divide .drinks {
+.main .content .divide .drinks{
     padding-top: 15px;
 
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 2rem;
+    column-gap: 1rem;
 }
 .main .content .example-card {
     max-width: 400px;
@@ -40,27 +39,96 @@
 }
 .main .content .image {
     max-width: 500px;
-    min-height: 300px;
+    height: 230px;
     background-image: url('../../assets/cola.jpg');
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 .main .content .image2 {
     max-width: 500px;
-    min-height: 300px;
+    height: 230px;
     background-image: url('../../assets/milk.jpg');
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 .main .content .image3 {
     max-width: 500px;
-    min-height: 300px;
+    height: 230px;
     background-image: url('../../assets/rootBeer.jpg');
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
   
 .main .content .example-header-image {
     background-image: url('../../assets/bg4.jpg');
     background-size: cover;
+}
+
+/* Desktop/Laptop */
+@media (max-width: 1200px) {
+}
+/* Tablet */
+@media (max-width: 992px) {
+    .main .content .image {
+        max-width: 500px;
+        height: 200px;
+        background-image: url('../../assets/cola.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .main .content .image2 {
+        max-width: 500px;
+        height: 200px;
+        background-image: url('../../assets/milk.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .main .content .image3 {
+        max-width: 500px;
+        height: 200px;
+        background-image: url('../../assets/rootBeer.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .main .content .divide .upper p {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1rem;
+        font-weight: 700;
+        color:green;
+    }
+    .mat-card-title {
+        font-size: 1.2rem;
+    }
+}
+    
+/* Tablet/Mobile Large */
+@media (max-width: 768px) {
+    .main .content .divide .drinks {
+        grid-template-columns: unset;
+
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: repeat(3, auto);
+        justify-content: center;
+
+        row-gap: 20px;
+    }
+}
+/* Mobile */
+@media (max-width: 576px) {
+    .main .content {
+        margin: 1.2rem 1.2rem;
+    }
+    .main .content .divide .upper {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 10px;
+    }
+    .main .content .divide .upper p {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1rem;
+        font-weight: 700;
+        color:green;
+    }
 }
