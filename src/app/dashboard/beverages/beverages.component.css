@@ -13,7 +13,7 @@
 .main .table-container .upper-portion {
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr auto;
+    grid-template-columns: 1fr 1fr;
 
     padding: 0 1.5rem;
 }
@@ -89,6 +89,19 @@ table tr button {
 /* Mobile */
 @media (max-width: 576px) {
     * {
+        font-size: 1rem;
+    }
+    table {
+        padding: 0 1rem;
+    }
+    table th{
+        /*background-color: #614c80 ;*/
+        font-size: .9rem;
+    }
+    table tr td {
         font-size: .8rem;
+        
+        width: 1rem;
+        margin-left: 0px;
     }
 }

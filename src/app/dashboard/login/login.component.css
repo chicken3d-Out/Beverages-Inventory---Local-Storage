@@ -133,7 +133,7 @@
     align-items: center;
 
     width: 100%;
-    padding-left: 17%;
+    /* padding-left: 17%; */
     font-size: 1.1rem;
     gap:5px;
 }
@@ -146,5 +146,24 @@
     padding: unset;
     padding: 5px 10px;
     margin-left: 25%;
-    
+}
+
+/* Desktop/Laptop */
+@media (max-width: 1200px) {
+}
+/* Tablet */
+@media (max-width: 992px) {
+    .main-container .main .banner-container .banner-left {
+        display: none;  
+    }
+}
+/* Tablet/Mobile Large */
+@media (max-width: 768px) {
+}
+/* Mobile */
+@media (max-width: 576px) {
+    .main-container .main .banner-container .banner-right {
+        width: 280px;
+        height: 430px;
+    }
 }

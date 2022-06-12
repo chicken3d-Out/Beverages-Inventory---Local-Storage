@@ -133,7 +133,7 @@ a {
       width: 100%;
       /* height: calc(100vh - 66px); */
       
-  }
+    }
 
   /* Desktop/Laptop */
 @media (max-width: 1200px) {
@@ -195,6 +195,55 @@ a {
       cursor: pointer;  
       padding: 0 15px;
       transition: all 0.5s ease-in-out;
+  }
+}
+
+/* Desktop/Laptop */
+@media (max-width: 1200px) {
+}
+/* Tablet */
+@media (max-width: 992px) {
+}
+/* Tablet/Mobile Large */
+@media (max-width: 768px) {
+  /*Tool Bar*/
+  .toolbar .logout-section{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 0 10px;
+    background-color:unset;
+  } 
+  .toolbar .logout-section .admin-name p{
+    color: #eee;
+    font-size: 0.9rem;
+    margin: unset;
+  }
+  .toolbar span {
+    color: white;
+    font-size: 0.9rem;
+  }
+}
+/* Mobile */
+@media (max-width: 576px) {
+  /*Tool Bar*/
+  .toolbar .logout-section{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 0 10px;
+    background-color:unset;
+  } 
+  .toolbar .logout-section .admin-name p{
+    color: #eee;
+    font-size: 0.75rem;
+    margin: unset;
+  }
+  .toolbar span {
+    color: white;
+    font-size: 0.75rem;
   }
 }
   
