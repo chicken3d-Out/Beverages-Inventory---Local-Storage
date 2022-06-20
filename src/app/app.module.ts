@@ -37,6 +37,8 @@ import { UpdateComponent } from './dashboard/beverages/update/update.component';
 import { AdminAddComponent } from './dashboard/admin/admin-add/admin-add.component';
 import { AdminUpdateComponent } from './dashboard/admin/admin-update/admin-update.component';
 import { LoginComponent } from './dashboard/login/login.component';
+import { NotfoundComponent } from './dashboard/notfound/notfound.component';
+import { AuthTokenGuard } from './services/auth-token.guard';
 
 @NgModule({
   declarations: [
@@ -81,8 +83,8 @@ import { LoginComponent } from './dashboard/login/login.component';
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
       //Redirect Path
-      { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-      {path: '', component: DashboardComponent, children: [
+      { path: '', redirectTo: '/login', pathMatch: 'full' },
+      {path: '', component: DashboardComponent, canActivate: [AuthTokenGuard], children: [
         {path: 'dashboard', component: DashboardStatComponent},
         {path: 'beverages', component: BeveragesComponent},
         {path: 'admin', component: AdminComponent},
@@ -103,7 +105,7 @@ import { LoginComponent } from './dashboard/login/login.component';
         {path: 'admin/update/:id', component: AdminUpdateComponent}
 
       ]},
-      
+      { path: '**', pathMatch: 'full', component: NotfoundComponent },
     ])
   ],
   providers: [],

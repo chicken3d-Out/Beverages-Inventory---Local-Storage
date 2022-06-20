@@ -15,6 +15,7 @@ export class LoginService {
   auth(user:any){
     
     const records = localStorage.getItem('Admin');
+    
     if(records !==null){
     this.admin = JSON.parse(records);
     }

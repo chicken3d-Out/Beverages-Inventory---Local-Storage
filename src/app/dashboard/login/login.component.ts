@@ -23,7 +23,6 @@ export class LoginComponent implements OnInit {
   validation(){
     this.login = this.fb.group({
       username: [null,[Validators.required,
-        // Validators.pattern('[0-9 ]*'),
         Validators.minLength(3),
         // Validators.maxLength(7)
       ]],
@@ -41,8 +40,9 @@ export class LoginComponent implements OnInit {
   }
 
   //setCredential status in Servive
-  onSubmit(data: any){
+  onSubmit(data:any){
     const token = this.loginService.auth(data.value);
+    
     if(token){
       //Store username token
       localStorage.setItem('Token',JSON.stringify(token.username))

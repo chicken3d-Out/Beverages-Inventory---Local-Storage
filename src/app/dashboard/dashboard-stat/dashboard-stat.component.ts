@@ -14,13 +14,16 @@ export class DashboardStatComponent implements OnInit {
 
   getCount(){
     const record = localStorage.getItem('BeveragesList')
+    
     if(record!== null){
       const bevList = JSON.parse(record);
+
       this.beveragesCount = bevList.length
     }
 
     const records = localStorage.getItem('Admin')
     if(records!== null){
+      
       const accountList = JSON.parse(records);
       this.accountCount = accountList.length
     }

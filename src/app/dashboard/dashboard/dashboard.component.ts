@@ -24,13 +24,13 @@ export class DashboardComponent implements OnInit {
   // Log Out Section
   logout(){
     localStorage.removeItem('Token');
-    this.route.navigate(['']);
+    this.route.navigate(['login']);
 
     //Open Snackbar
     this.snackbar.open("Successfully Logged Out","X",{duration: 3000});
 
-    
   }
+
   // Display Section Name
   currentNavigation(nav: String){
     this.currentNav = nav
