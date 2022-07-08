@@ -32,25 +32,25 @@
           <!--Row For Firstname-->
           <ng-container matColumnDef="name">
             <th mat-header-cell mat-sort-header *matHeaderCellDef>Name</th>
-            <td mat-cell *matCellDef="let element">{{element.name}}</td>
+            <td mat-cell *matCellDef="let element">{{element.name |titlecase}}</td>
           </ng-container>
         
           <!--Row For lastname-->
           <ng-container matColumnDef="price">
             <th mat-header-cell mat-sort-header *matHeaderCellDef>Price</th>
-            <td mat-cell *matCellDef="let element">{{element.price}}</td>
+            <td mat-cell *matCellDef="let element">{{element.price | peso}}</td>
           </ng-container>
         
           <!--Row For category-->
           <ng-container matColumnDef="stock">
             <th mat-header-cell mat-sort-header *matHeaderCellDef>Stock</th>
-            <td mat-cell *matCellDef="let element">{{element.stock}}</td>
+            <td mat-cell *matCellDef="let element">{{element.stock | case}}</td>
           </ng-container>
 
           <!--Row For Gender-->
           <ng-container matColumnDef="supplier">
             <th mat-header-cell mat-sort-header *matHeaderCellDef>Supplier</th>
-            <td mat-cell *matCellDef="let element">{{element.supplier}}</td>
+            <td mat-cell *matCellDef="let element">{{element.supplier |titlecase}}</td>
           </ng-container>
 
           <!--Row For Actions-->

@@ -39,6 +39,9 @@ import { AdminUpdateComponent } from './dashboard/admin/admin-update/admin-updat
 import { LoginComponent } from './dashboard/login/login.component';
 import { NotfoundComponent } from './dashboard/notfound/notfound.component';
 import { AuthTokenGuard } from './services/auth-token.guard';
+import { PesoPipe } from './services/peso.pipe';
+import { PasswordPipe } from './services/password.pipe';
+import { CasePipe } from './services/case.pipe';
 
 @NgModule({
   declarations: [
@@ -56,7 +59,10 @@ import { AuthTokenGuard } from './services/auth-token.guard';
     UpdateComponent,
     AdminAddComponent,
     AdminUpdateComponent,
-    LoginComponent
+    LoginComponent,
+    PesoPipe,
+    PasswordPipe,
+    CasePipe
   ],
   imports: [
     BrowserModule,
@@ -83,7 +89,7 @@ import { AuthTokenGuard } from './services/auth-token.guard';
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
       //Redirect Path
-      { path: '', redirectTo: '/login', pathMatch: 'full' },
+      { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
       {path: '', component: DashboardComponent, canActivate: [AuthTokenGuard], children: [
         {path: 'dashboard', component: DashboardStatComponent},
         {path: 'beverages', component: BeveragesComponent},
