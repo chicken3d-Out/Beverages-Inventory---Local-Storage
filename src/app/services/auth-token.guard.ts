@@ -13,13 +13,14 @@ export class AuthTokenGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-    const token = localStorage.getItem("Token");
-    if(token){
-      return true;
-    }
+    // const token = localStorage.getItem("Token");
+    // if(token){
+    //   return true;
+    // }
 
-    this.route.navigate(['login']);
-    return false;
+    // this.route.navigate(['login']);
+    // return false;
+    return true;
   }
   
 }
